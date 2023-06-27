@@ -4,6 +4,22 @@
 @tailwind utilities;
 
 
+@layer utilities {
+
+  .clip-hidden {
+
+    -webkit-clip-path: circle(1px at 100% 0);
+    clip-path: circle(1px at 100% 0);
+
+  }
+
+  .clip-visible{
+    -webkit-clip-path: circle(100% );
+    clip-path: circle(100%);
+  }
+
+}
+
 
 :root{
   /* Typography */

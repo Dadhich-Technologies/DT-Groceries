@@ -5,7 +5,7 @@ import Faq_Hero from "../../components/Faq/Faq_Hero/Faq_Hero"
 const Faq = () => {
   return (
     <div className="faq min-h-screen ">
-        <Navbar variant='green'/>
+        <Navbar bgcolor="primary-green" logocolor="white" linkscolor="white"/>
         <Faq_Hero subtitle="Faq's" title={["Any questions?","We’re here to help"]}/> {/* Title has two element because they have <br> between them */}
         <Delivery_information/>
         <div className="w-full my-10 flex flex-col items-center gap-4">

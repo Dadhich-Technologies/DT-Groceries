@@ -24,7 +24,7 @@ const ProductDetail = () => {
   }
   return (
     <section className=" w-full pt-[80px]">
-      <Navbar bgcolor="white" logocolor="primary-green" linkscolor="black" />
+      <Navbar bgcolor="primary-green" logocolor="white" linkscolor="white" />
       <div className="breadcrumb w-full h-[35px] flex items-center pl-5 bg-gray-200">
         <Breadcrumbs aria-label="breadcrumb">
           <Link underline="hover" color="inherit" href="/">

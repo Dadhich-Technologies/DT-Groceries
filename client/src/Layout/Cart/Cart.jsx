@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Quantity_com } from "../../components/Product_Detail_component/Product_Detail_component";
 import { CartContext } from "../../Contexts/CartI";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Cart = () => {
   const { open, setOpen, cartItems, removeFromCart, getTotalPrice,convertinr } = useContext(CartContext);
@@ -19,7 +20,7 @@ const Cart = () => {
     >
       <div className=" w-full  flex justify-between ">
         <h5 className=" ">Your Cart ({cartItems.length})</h5>
-        <h5 onClick={()=>{setOpen(false)}}>X</h5>
+        <h5 onClick={()=>{setOpen(false)}}><CloseIcon/></h5>
       </div>
       <div className="my-4 flex flex-col gap-4">
         <span>Free Shipping on orders over $200.00</span>
@@ -32,7 +33,7 @@ const Cart = () => {
       </div>
       <div className=" w-full overflow-y-scroll h-[calc(100vh-250px)] flex flex-col gap-3 ">
         {cartItems.map((item)=>(
-              <Cart_Item key={item.id} id={item.id} name={item.name} price={item.price} quantity={item.quantity} image={item.img_link}  removeFromCart={removeFromCart}/>
+              <Cart_Item key={item.id} id={item.id} name={item.name} convertinr={convertinr} price={item.price} quantity={item.quantity} image={item.img_link}  removeFromCart={removeFromCart}/>
         ))}
       </div>
       <div className=" absolute bottom-0 w-full  h-24 ">
@@ -54,20 +55,22 @@ const Cart = () => {
 
 export default Cart;
 
-const Cart_Item = ({ name, price, quantity, image , id, removeFromCart  }) => {
+const Cart_Item = ({ name, price, quantity, image , id, removeFromCart, convertinr  }) => {
   
   return (
     <div className=" flex gap-3 ">
       <div className=" w-[120px] h-[150px] bg-black">
-        <img src={image} alt="" width={"100%"} height={"100%"} />
+        <img  src={image} alt="" width={"100%"} height={"100%"} />
       </div>
-        <div className="flex-grow p-3">
+        <div className="flex-grow p-3 ">
       <div className=" flex justify-between">
         <span className=" ">{name}</span>
-        <span onClick={()=>{removeFromCart(id)}} >X</span>
+        <span onClick={()=>{removeFromCart(id)}} ><CloseIcon/></span>
       </div>
-      <div>
+
+      <div className="flex justify-between mt-12 items-end">
         <Quantity id={id}/>
+        <span className="mr-2">{convertinr(price * quantity)}</span>
       </div>
       </div>
     </div>
@@ -89,14 +92,14 @@ const Quantity = ({ id }) => {
   };
 
   return (
-    <div className="custom-number-input h-10 w-32">
-      <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+    <div className="custom-number-input h-7 w-24">
+      <div className="flex flex-row h-7 w-full rounded-lg relative bg-transparent mt-1">
         <button
           data-action="decrement"
-          className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+          className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none"
           onClick={handleDecrement}
         >
-          <span className="m-auto text-2xl font-thin">-</span>
+          <span className="m-auto text-2xl font-thin leading-[1]">-</span>
         </button>
         <input
           type="number"
@@ -107,10 +110,10 @@ const Quantity = ({ id }) => {
         />
         <button
           data-action="increment"
-          className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+          className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer"
           onClick={handleIncrement}
         >
-          <span className="m-auto text-2xl font-thin">+</span>
+          <span className="m-auto text-xl font-thin leading-[1]">+</span>
         </button>
       </div>
     </div>

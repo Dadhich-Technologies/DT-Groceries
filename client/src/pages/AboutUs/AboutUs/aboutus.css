@@ -1,0 +1,57 @@
+/* .image{
+    display: flex;
+    justify-content: center;
+}
+img{
+width: 400px;
+
+}
+.width{
+    height: 400px;
+}
+.about{
+    color: white;
+    margin-left: 6rem;
+}
+
+.text{
+    color: #52AF1F;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+}
+.grid_about{
+    display: flex;
+    flex-direction: row;
+    background-color: #52AF1F;
+    
+}
+
+
+.profile{
+    display: flex;
+    justify-content: center;
+}
+.user{
+    width: 300px;
+    height: 300px;
+    margin: 0px 40px;
+    
+}
+.icon{
+    margin: 0px 110px;
+}
+.facebook{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+} */

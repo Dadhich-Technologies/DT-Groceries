@@ -7,7 +7,7 @@ import Maps from "./Maps"
 const Contact_us = () => {
   return (
     <div className="faq min-h-screen ">
-    <Navbar variant='green'/>
+    <Navbar bgcolor='primary-green' logocolor='white' linkscolor='white'/>
     <Faq_Hero subtitle="Need Help" title={["Haven’t found","what you’re looking for? Contact us"]}/> 
     <Maps/>
     <div className="grid lg:grid-cols-3 grid-cols-1  container mx-auto mt-5">

@@ -61,6 +61,8 @@ const Card = () => {
               src="https://source.unsplash.com/featured/30x30"
               className=" rounded-full"
               alt=""
+              width="30px"
+              height="30px"
             />
           </div>
           <div className="w-auto p-1.5">

@@ -1,0 +1,19 @@
+.containerCard{
+  display: flex;
+  flex-direction: column;
+}
+.specialization{
+  text-align: center;
+  margin-top: 2rem;
+}
+.paper{
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin-top: 2rem;
+  justify-content: space-around;
+}
+.grid1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

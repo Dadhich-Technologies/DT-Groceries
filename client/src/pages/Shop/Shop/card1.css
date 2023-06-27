@@ -1,0 +1,19 @@
+.picture{
+    display: flex;
+    margin: 5rem -21.5rem;
+}
+/* .container1{
+    background-color: aqua;
+    display: flex;
+} */
+.container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* .container1 .card {
+    flex: 0 0 calc(99.33% - 20px);
+    margin: 10px;
+  } */
+  

@@ -1,11 +1,11 @@
-import background from '../../assets/Home/bg.jpg'
+import background from '../../assets/Home/bg.webp'
 import {motion} from 'framer-motion'
 const Hero_Section = () => {
   return (
     <div className=" w-full h-screen items-center flex bg-cover bg-center bg-fixed " style={{ backgroundImage:`url(${background})` }}>
-        <div className="overlay w-screen h-screen absolute left-0 top-0 bg-black opacity-30 z-1"></div>
+        <div className="overlay w-screen h-screen absolute left-0 top-0 backdrop-filter backdrop-blur-[2px] bg-opacity-30 bg-black  z-[1]"></div>
         <div className="container mx-auto mt-[80px]  ">
-            <div className="content max-w-[600px] flex flex-col gap-5    px-7 lg:px-12 z-20">
+            <div className="max-w-[600px] flex flex-col gap-5    px-7 lg:px-12 z-20">
                 <motion.h1 
                     initial={{ opacity: 0, x:'-100px' }}
                     animate={{ opacity: 1, x:'0px' }}
